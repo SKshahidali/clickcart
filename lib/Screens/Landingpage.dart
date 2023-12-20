@@ -1,3 +1,4 @@
+import 'package:clickcart/Screens/SignUpPage.dart';
 import 'package:clickcart/Screens/Signinpage.dart';
 import 'package:clickcart/colors.dart';
 import 'package:flutter/material.dart';
@@ -70,22 +71,25 @@ class _LandingPageState extends State<LandingPage> {
                 const SizedBox(height: 30,),
                 //Sign Up Button //
 
-                Container(
-                  height: 60,
-                  width: MediaQuery.of(context).size.width * 0.75,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(12),
-                    color: Color(0XD9D9D9).withOpacity(0.2),
-                    border: Border.all(width: 1.5,color:primarycolor),
-                  ),
-                  child: Center(
-                    child: Text(
-                      "REGISTER",
-                      style: GoogleFonts.roboto(
-                          fontSize: 22,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.white
-                          ), //Google font//
+                GestureDetector(
+                  onTap: () => Get.to(SignUpPage()),
+                  child: Container(
+                    height: 60,
+                    width: MediaQuery.of(context).size.width * 0.75,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(12),
+                      color: Color(0XD9D9D9).withOpacity(0.2),
+                      border: Border.all(width: 1.5,color:primarycolor),
+                    ),
+                    child: Center(
+                      child: Text(
+                        "REGISTER",
+                        style: GoogleFonts.roboto(
+                            fontSize: 22,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white
+                            ), //Google font//
+                      ),
                     ),
                   ),
                 ),
